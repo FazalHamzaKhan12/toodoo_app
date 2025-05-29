@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:toodoo_app/screens/register_screen.dart';
+import 'package:toodoo_app/screens/Login%20&%20Register%20Screens/register_screen.dart';
 
 class HomeScreens extends StatelessWidget {
   const HomeScreens({super.key});
