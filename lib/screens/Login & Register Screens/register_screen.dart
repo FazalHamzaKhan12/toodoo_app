@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:toodoo_app/screens/Login%20&%20Register%20Screens/login_screen.dart';
-import 'package:toodoo_app/screens/widgets/bottom_button.dart';
-import 'package:toodoo_app/screens/widgets/text_field.dart';
+import 'package:toodoo_app/widgets/bottom_button.dart';
+import 'package:toodoo_app/widgets/text_field.dart';
 
 class RegisterScreen extends StatelessWidget {
   const RegisterScreen({super.key});

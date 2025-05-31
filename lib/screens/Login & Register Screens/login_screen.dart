@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:toodoo_app/screens/Login%20&%20Register%20Screens/register_screen.dart';
-import 'package:toodoo_app/screens/new.dart';
+import 'package:toodoo_app/screens/clockscreen.dart';
 import 'package:toodoo_app/screens/todos_screen.dart';
-import 'package:toodoo_app/screens/widgets/bottom_button.dart';
-import 'package:toodoo_app/screens/widgets/text_field.dart';
+import 'package:toodoo_app/widgets/bottom_button.dart';
+import 'package:toodoo_app/widgets/text_field.dart';
 
 class LoginScreen extends StatelessWidget {
   const LoginScreen({super.key});
@@ -49,7 +49,7 @@ class LoginScreen extends StatelessWidget {
             onTap:
                 () => Navigator.push(
                   context,
-                  MaterialPageRoute(builder: (context) => ClockPage()),
+                  MaterialPageRoute(builder: (context) => ToDosScreen()),
                 ),
             child: CustomButton.getStartedButton("Login"),
           ),
