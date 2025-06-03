@@ -3,36 +3,36 @@ import 'package:toodoo_app/todo.dart';
 
 class TodoItem extends StatelessWidget {
   final ToDo todo;
+  final Function(bool?) onChanged;
+  final VoidCallback onDelete;
 
-  const TodoItem({super.key, required this.todo});
+  const TodoItem({
+    super.key,
+    required this.todo,
+    required this.onChanged,
+    required this.onDelete,
+  });
 
   @override
   Widget build(BuildContext context) {
     return ListTile(
-      onTap: () {},
-      shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(20)),
-      tileColor: Colors.white,
-      leading: Icon(Icons.check_box, color: Colors.blue),
+      leading: Checkbox(
+        value: todo.isDone,
+        activeColor: const Color(0xff50C2C9),
+        onChanged: onChanged,
+      ),
       title: Text(
         todo.todoText,
         style: TextStyle(
-          fontSize: 16,
-          color: Colors.black,
-          decoration: TextDecoration.lineThrough,
+          fontSize: 13,
+          fontWeight: FontWeight.bold,
+          color: Colors.black87,
+          decoration: todo.isDone ? TextDecoration.lineThrough : null,
         ),
       ),
-      trailing: Container(
-        height: 35,
-        width: 35,
-        decoration: BoxDecoration(
-          color: Colors.red,
-          borderRadius: BorderRadius.circular(10),
-        ),
-        child: IconButton(
-          onPressed: () {},
-          iconSize: 18,
-          icon: Icon(Icons.delete, color: Colors.white),
-        ),
+      trailing: IconButton(
+        icon: const Icon(Icons.delete, color: Colors.red),
+        onPressed: onDelete,
       ),
     );
   }
